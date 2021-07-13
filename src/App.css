@@ -1,0 +1,89 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+.navbar {
+  background-color: blue;
+  color: white;
+ padding: 10px;
+  width: 100%;
+}
+a{
+  text-decoration: none;
+}
+.navbar a{
+  color: white;
+  font-size: 1.2rem;
+  margin: 0 20px;
+}
+.navbar .links {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+
+.add-employee{
+  border: 1px solid gray;
+  width: 90%;
+  margin: 70px 50%;
+  transform: translateX(-50%);
+  max-width: 400px;
+  padding: 10px;
+  text-align: center;
+}
+.add-employee input{
+  width: 90%;
+  margin: 10px 5%;
+  font-size: 1.2rem;
+}
+.add-employee button {
+  margin: 10px 70%;
+  font-size: 1.2rem;
+  padding: 5px 20px;
+  outline: none;
+  border: none;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+.center{
+  text-align: center;
+  margin-top: 20px;
+}
+.add-employee h2{
+  margin: 20px;
+}
+.add-employee button:hover {
+background-color: rgb(81, 81, 250);
+}
+.employeelist{
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.card{
+  width: 450px;
+  text-align: center;
+  padding: 10px; 
+  border: 1px solid gray;
+  margin-top: 30px;
+}
+
+.load-more{
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-color: blue;
+  outline: none;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  width: 250px;
+}
+button{
+  cursor: pointer;
+}
