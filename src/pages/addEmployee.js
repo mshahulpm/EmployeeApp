@@ -19,15 +19,27 @@ const [list,setList] = useState({
 })
 
 // loading nessosory datas
-async function loadData(){
-  let cityData = await  axios.get( 'https://60ed67fba78dc700178adeb9.mockapi.io/floges/city')
- cityData = cityData.data.map(dt=>dt.city_name)
-        setList({...list,city:cityData})
- let companyData = await    axios.get(' https://60ed67fba78dc700178adeb9.mockapi.io/floges/company')
-        companyData = companyData.data.map(dt=>dt.company)
-        setList({...list,company:companyData})
-}
-loadData()
+ async function loadData() {
+    try {
+      let cityData = await axios.get(
+        "https://60ed67fba78dc700178adeb9.mockapi.io/floges/city"
+      );
+      cityData = cityData.data.map((dt) => dt.city_name);
+
+      let companyData = await axios.get(
+        " https://60ed67fba78dc700178adeb9.mockapi.io/floges/company"
+      );
+      companyData = companyData.data.map((dt) => dt.company);
+      setList({ city: cityData, company: companyData });
+    } catch (error) {
+      console.log(error);
+      alert("error occured when loading data");
+    }
+  }
+  useEffect(() => {
+    loadData();
+  }, []);
+ 
 
 const handleChange = e=>{
     const {name,value} = e.target 
