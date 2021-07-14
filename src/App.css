@@ -22,6 +22,22 @@ a{
   right: 30px;
   top: 20px;
 }
+@media screen and (max-width: 600px) {
+  .navbar {
+    height: 50px;
+  }
+  .navbar .links {
+    top: 40px;
+  }
+  .navbar a {
+    font-size: 1rem;
+    margin: 10px;
+    padding-top: 20px;
+  }
+  .navbar h1 {
+    font-size: 1.2rem;
+  }
+}
 
 .add-employee{
   border: 1px solid gray;
